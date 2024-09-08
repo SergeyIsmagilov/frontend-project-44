@@ -17,14 +17,10 @@ const findGcd = (num1, num2) => {
 
 // можно добавить проверку на то, не равен ли НОД 1, чтобы играть было интереснее
 const gcdLogic = () => {
-  let randomInt1 = getRandomInt();
-  const randomInt2 = getRandomInt();
-
   // так как НОД для двух нулей не определён,
   // стоит исключить вероятность того, что оба числа будут равны нулю
-  while (randomInt1 === 0) {
-    randomInt1 = getRandomInt();
-  }
+  const randomInt1 = getRandomInt(1, 100);
+  const randomInt2 = getRandomInt();
 
   console.log(`Question: ${randomInt1} ${randomInt2}`);
 

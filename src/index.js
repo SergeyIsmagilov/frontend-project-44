@@ -3,8 +3,8 @@ import readlineSync from 'readline-sync';
 // общие функции
 // можно вынести в отдельный модуль, если их будет больше
 
-// случайное целое в диапазоне от 0 до 100 включительно
-const getRandomInt = () => Math.floor(Math.random() * 101);
+// случайное целое в заданом диапазоне включительно (от 0 до 100 по умолчанию)
+const getRandomInt = (min = 0, max = 100) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 // функции
 
